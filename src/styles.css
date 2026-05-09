@@ -1,0 +1,89 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: sans-serif;
+  background: #FAF6F0;
+  color: #2C1810;
+  min-height: 100vh;
+}
+
+.header {
+  background: #5C3A1E;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+}
+.header h1 { font-size: 1.5rem; color: #F0D4A8; }
+.header p  { font-size: 0.8rem; color: #E8D5B0; }
+
+.main { max-width: 1000px; margin: 0 auto; padding: 2rem; display: flex; flex-direction: column; gap: 2rem; }
+
+.form-section { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.form-section h2 { margin-bottom: 1rem; color: #5C3A1E; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+
+.field { display: flex; flex-direction: column; gap: 4px; }
+.field label { font-size: 0.82rem; font-weight: 600; color: #6B4423; }
+.field input, .field select {
+  padding: 0.6rem 0.9rem;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.field input:focus, .field select:focus { border-color: #C8863A; }
+
+.error-msg { color: #c0392b; font-size: 0.85rem; margin-bottom: 0.75rem; }
+
+.btn-agregar {
+  padding: 0.65rem 1.5rem;
+  background: #C8863A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-agregar:hover { background: #8B5A1E; }
+
+section h2 { margin-bottom: 1rem; color: #5C3A1E; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+.card-top { display: flex; justify-content: space-between; align-items: center; }
+.badge { font-size: 0.75rem; background: #FAF6F0; padding: 3px 8px; border-radius: 100px; color: #6B4423; border: 1px solid #E8D5B0; }
+.precio { font-size: 1.2rem; font-weight: 700; color: #8B5A1E; }
+.card h3 { font-size: 1rem; color: #2C1810; }
+.card p  { font-size: 0.82rem; color: #9B7B60; }
+
+@media (max-width: 600px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .main { padding: 1rem; }
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  background: white;
+}
+.search-input:focus { border-color: #C8863A; }
