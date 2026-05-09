@@ -1,7 +1,10 @@
 import type { Producto, Categoria } from '../types';
 
 const EMOJI: Record<Categoria, string> = {
-  pan: '🍞', pastel: '🎂', galletas: '🍪',
+  pan: '🍞',
+  pastel: '🎂',
+  galletas: '🍪',
+  bebida: '☕',
 };
 
 interface Props {
